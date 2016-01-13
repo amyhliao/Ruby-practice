@@ -1,12 +1,13 @@
 # Directions:
 
-# Given few numbers, you need to print out the digits that are not being used.
+# Given a string, you progressively need to concatenate the first letter from the left and the first letter to the right and "1", then the second letter from the left and the second letter to the right and "2", and so on.
 
-# Example:
+# If the string's length is odd drop the central element.
 
-# unused_digits(12, 34, 56, 78) # "09"
-# unused_digits(2015, 8, 26) # "3479"
-# Note:
+# For example:
+# char_concat("abcdef")    == 'af1be2cd3'
+# char_concat("abc!def")   == 'af1be2cd3' # same result
 
-# Result string should be sorted
-# The test case won't pass Integer with leading zero
+def char_concat(word)
+  (1..word.length/2).map {|i| word[i - 1] + word[-i] + i.to_s}.join
+end
