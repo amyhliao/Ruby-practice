@@ -11,4 +11,6 @@
 
 # Solution:
 def unused_digits *integer_array
+  remaining_nums = Array(0..9) - integer_array.flatten.join.scan(/\d/).sort.map(&:to_i)
+  remaining_nums.join.to_s
 end
