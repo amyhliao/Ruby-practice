@@ -10,3 +10,5 @@
 # The test case won't pass Integer with leading zero
 
 # Solution:
+def unused_digits *integer_array
+end
